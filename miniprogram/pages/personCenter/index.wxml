@@ -1,0 +1,25 @@
+<!--pages/personCenter/index.wxml-->
+
+
+<view>
+  <text>名称:\n</text>
+  <text>名称:</text>
+</view>
+
+
+
+
+
+
+
+<view class='personCenter'>
+  <view class='userBaiscInfo'>
+    <open-data type="userAvatarUrl" class="userHeadIcon"></open-data>
+    <open-data type="userNickName"></open-data>
+  </view>
+  <text>账户类型:{{accountType}}</text>
+  <view class='personCenterAddressContiner' catchtap='personCenterAddressListener'>
+    <text class='personCenterAddressKey'>收货地址: </text>
+    <text class='personCenterAddressValue'>{{address}}</text>
+  </view>
+</view>

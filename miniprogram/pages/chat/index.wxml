@@ -1,0 +1,12 @@
+<!--pages/chat/index.wxml-->
+<view class="chatList" wx:for="{{chatArray}}" wx:key="userId">
+  <image class="chatItemHeadIcon" src='{{item.userIcon}}'></image>
+  <view class='itemContent'>
+    <text id='itemUserName'>{{item.userName}}</text>
+    <view class='itemChatContentContiner'>
+      <text id='itemChatContent'>{{item.chatContent}}</text>
+      <text id='itemChatTime'>2019年3月24</text>
+    </view>
+  </view>
+
+</view>

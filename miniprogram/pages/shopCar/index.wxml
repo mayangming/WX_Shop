@@ -1,0 +1,22 @@
+<!--pages/shopCar/index.wxml-->
+<view class='shopCarRoot'>
+  <view class='shopCarMsg'>
+    <text class='shopCarCount'>药品数量：{{shopLength}}/20</text>
+    <text class='shopCarManage'>管理</text>
+  </view>
+  <view class='shopCarList' wx:for="{{shopList}}" wx:key="{{item.shopId}}" data-index='index' data-item='{{shopList[index]}}'>
+    <checkbox class='shopCarItemCheckBox' catchtap='shopCarCheckBoxListener' data-index='{{index}}'></checkbox>
+    <image class="shopCarItemIcon" src='{{item.shopIcon}}'></image>
+    <view class='shopCarItemMsg'>
+      <text class='shopCarItemName'>{{item.shopName}}</text>
+      <view class='shopCarItemCountMsg'>
+        <text class='shopCarItemPrice'>{{item.shopPrice}}分</text>
+        <text class='shopCarItemCount'>{{item.shopPrice}}份</text>
+      </view>
+    </view>
+  </view>
+  <view class='shopCarOperator'>
+    <text class='shopCarTotal'>合计:{{priceCount}}￥</text>
+    <button catchtap='shopCarCountWorkListener'>结算</button>
+  </view>
+</view>

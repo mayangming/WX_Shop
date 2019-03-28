@@ -1,0 +1,14 @@
+<!--pages/shop/index.wxml-->
+<view class='shop_root'>
+  <view class='shop_search_out'>
+    <icon class="shop_search_icon" type="search" size="14"></icon>
+    <input class='shop_search_input' name="search" bindconfirm='shop_search_function' type='text' confirm-type='search' placeholder="中药搜索" />
+  </view>
+  <view class="shopItem" wx:for="{{shopArray}}" wx:key="shopId" data-index="{{index}}" data-content='{{shopArray[index]}}' catchtap='itemOnClickListener'>
+    <image class="shopItemHeadIcon" src='{{item.shopIcon}}'></image>
+    <view class='shopItemMsg'>
+      <text class='shopItemName'>{{item.shopName}}</text>
+      <text class='shopItemPrice'>{{item.shopPrice}}分</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,54 @@
+/* pages/chat/index.wxss */
+
+.chatList {
+  width: 100%;
+  height: auto;
+  margin: 20rpx;
+  display: flex;
+}
+
+.chatItemHeadIcon {
+  width: 145rpx;
+  height: 145rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+  display: flex;
+  overflow: hidden;
+}
+
+.itemContent {
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.itemChatContentContiner {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#itemUserName {
+  font-size: 35rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#itemChatContent {
+  width: 70%;
+  margin-top: 10rpx;
+  font-size: 30rpx;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+#itemChatTime {
+  font-size: 27rpx;
+}

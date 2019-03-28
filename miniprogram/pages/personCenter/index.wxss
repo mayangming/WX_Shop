@@ -1,0 +1,32 @@
+/* pages/personCenter/index.wxss */
+.personCenter{
+  width: auto;
+  height: auto;
+  margin: 50rpx;
+  display: flex;
+  flex-direction: column;
+}
+.userHeadIcon {
+  width: 185rpx;
+  height: 185rpx;
+  border-radius: 50%;
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 50rpx;
+}
+.userBaiscInfo{
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin-bottom: 50rpx;
+  flex-direction: column;
+  align-items: center;
+}
+.personCenterAddressContiner{
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: row;
+}
+.personCenterAddressKey{
+  flex: 0 0 160rpx;
+}

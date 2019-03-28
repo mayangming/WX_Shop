@@ -1,0 +1,30 @@
+/* pages/shopDetails/index.wxss */
+.shopDetailsRoot{
+  margin: 20rpx;
+}
+.shopDetailsIcon{
+  width: 100%;
+  display: flex;
+  margin-bottom: 20rpx;
+}
+.shopDetailsMsg{
+  display: flex;
+  flex-direction: column;
+}
+.shopDetailsBottomOperator{
+  position: fixed;
+  bottom: 0;
+  left: 20rpx;
+  right: 20rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.shopDetailsAdd{
+ width: 45%;
+}
+.shopDetailsCar{
+  width: 45%;
+}

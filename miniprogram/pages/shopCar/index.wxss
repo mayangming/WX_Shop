@@ -1,0 +1,71 @@
+/* pages/shopCar/index.wxss */
+
+.shopCarRoot {
+  margin: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+/** 购物车信息描述 */
+
+.shopCarMsg {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/** 购物车列表 */
+
+.shopCarList {
+  width: 100%;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+/** 购物车操作 */
+
+.shopCarOperator {
+  position: fixed;
+  bottom: 0;
+  right: 20rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.shopCarManage {
+  font-size: 35rpx;
+  align-self: center;
+}
+
+.shopCarCount {
+  font-size: 45rpx;
+}
+.shopCarItemCheckBox{
+  align-self: center
+}
+/** 商品图标 */
+.shopCarItemIcon {
+  width: 150rpx;
+  height: 170rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.shopCarItemMsg {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.shopCarItemCountMsg {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.shopCarTotal{
+  align-self: center;
+}
