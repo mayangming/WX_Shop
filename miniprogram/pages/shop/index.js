@@ -1,4 +1,5 @@
 // pages/shop/index.js
+const util = require('/../../util/util.js')
 Page({
 
   /**
@@ -24,14 +25,14 @@ Page({
         shopIcon: "http://photo.tuchong.com/1691049/f/18527449.jpg",
         shopPrice: 4534,/** 药品价格，单位为分 */
       },
-    ]
+    ],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.formatData();
   },
 
   /**
@@ -92,5 +93,16 @@ Page({
   },
   shop_search_function: function(e){
     var value = e.detail.value;
+  },
+  /**格式化列表数据 */
+  formatData: function(){
+    var tempShopArray = this.data.shopArray;
+    var length = tempShopArray.length;
+    for(let i = 0; i < length; i++){
+      tempShopArray[i].shopPriceShow = util.moneyFormatter(tempShopArray[i].shopPrice)
+    }
+    this.setData({
+      shopArray: tempShopArray
+    })
   }
 })

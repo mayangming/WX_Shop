@@ -8,7 +8,7 @@
     <image class="shopItemHeadIcon" src='{{item.shopIcon}}'></image>
     <view class='shopItemMsg'>
       <text class='shopItemName'>{{item.shopName}}</text>
-      <text class='shopItemPrice'>{{item.shopPrice}}分</text>
+      <text class='shopItemPrice'>{{item.shopPriceShow}}元</text>
     </view>
   </view>
 </view>

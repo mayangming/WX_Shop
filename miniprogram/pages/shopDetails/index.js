@@ -1,4 +1,5 @@
 // pages/shopDetails/index.js
+const util = require('/../../util/util.js')
 Page({
 
   /**
@@ -13,8 +14,12 @@ Page({
    */
   onLoad: function(options) {
     let item = JSON.parse(options.item);
+    console.log("-shopDetails---options--->" + options);
+    console.log("-shopDetails---options_item--->" + options.item);
+    var tempPrice = util.moneyFormatter(item.shopPrice);
     this.setData({
-      shopDetails: item
+      shopDetails: item,
+      price: tempPrice
     })
   },
 

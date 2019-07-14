@@ -1,8 +1,18 @@
 {
   "pages": [
+    "pages/home/home",
+    "pages/order/order",
+    "pages/cart/cart",
+    "pages/me/me",
+    "pages/detail/detail",
+    "pages/add-review/add-review",
+    "pages/review/review",
+    
+    "pages/test/test",
     "pages/chat/index",
     "pages/personCenter/index",
     "pages/shop/index",
+    "pages/chatDetails/index",
     "pages/shopDetails/index",
     "pages/shopCar/index",
     "pages/index/index",
@@ -18,22 +28,39 @@
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "医馆健康",
+    "navigationBarTitleText": "Store",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
+    "color": "#5D5F64",
+    "selectedColor": "#5D5F64",
+    "backgroundColor": "#fff",
+    "position": "bottom",
+    "borderStyle": "white",
     "list": [
       {
-        "pagePath": "pages/chat/index",
-        "text": "医患信息"
+        "text": "Home",
+        "pagePath": "pages/home/home",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-sel.png"
       },
       {
-        "pagePath": "pages/shop/index",
-        "text": "商城"
+        "text": "Order",
+        "pagePath": "pages/order/order",
+        "iconPath": "images/order.png",
+        "selectedIconPath": "images/order-sel.png"
       },
       {
-        "pagePath": "pages/personCenter/index",
-        "text": "个人中心"
+        "text": "Cart",
+        "pagePath": "pages/cart/cart",
+        "iconPath": "images/cart.png",
+        "selectedIconPath": "images/cart-sel.png"
+      },
+      {
+        "text": "Me",
+        "pagePath": "pages/me/me",
+        "iconPath": "images/me.png",
+        "selectedIconPath": "images/me-sel.png"
       }
     ]
   },
@@ -42,5 +69,6 @@
     "connectSocket": 3000,
     "uploadFile": 5000,
     "downloadFile": 5000
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

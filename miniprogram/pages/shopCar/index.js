@@ -1,4 +1,5 @@
 // pages/shopCar/index.js
+const util = require('/../../util/util.js')
 Page({
 
   /**
@@ -16,6 +17,7 @@ Page({
    */
   onLoad: function (options) {
     this.initData();
+    this.formatData();
   },
 
   /**
@@ -110,6 +112,18 @@ Page({
     }
     this.setData({
       priceCount: pricecount,
+    })
+  },
+  /**格式化列表数据 */
+  formatData: function () {
+    var tempShopArray = this.data.shopList;
+    var length = tempShopArray.length;
+    console.log("--size-->" + length)
+    for (let i = 0; i < length; i++) {
+      tempShopArray[i].shopPrice = util.moneyFormatter(tempShopArray[i].shopPrice)
+    }
+    this.setData({
+      tempShopArray: tempShopArray
     })
   }
 })

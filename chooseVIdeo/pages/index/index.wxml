@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='btn' bindtap='choose'>录制10秒</view>
+  <view class='btn' bindtap='choose2'>录制10秒，去掉第一个参数</view>
+</view>

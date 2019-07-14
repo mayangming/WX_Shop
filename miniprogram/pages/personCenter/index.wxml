@@ -1,17 +1,4 @@
 <!--pages/personCenter/index.wxml-->
-
-
-<view>
-  <text>名称:\n</text>
-  <text>名称:</text>
-</view>
-
-
-
-
-
-
-
 <view class='personCenter'>
   <view class='userBaiscInfo'>
     <open-data type="userAvatarUrl" class="userHeadIcon"></open-data>

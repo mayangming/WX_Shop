@@ -3,7 +3,7 @@
   <image class='shopDetailsIcon' src='{{shopDetails.shopIcon}}'></image>
   <view class='shopDetailsMsg'>
     <text>药品名:{{shopDetails.shopName}}</text>
-    <text>药品价格:{{shopDetails.shopPrice}}分</text>
+    <text>药品价格:{{price}}元</text>
   </view>
   <view class='shopDetailsBottomOperator'>
    <button class='shopDetailsAdd' catchtap='shopDetailsAddListener'>添加购物车</button>

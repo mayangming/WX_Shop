@@ -13,6 +13,10 @@
         <text class='shopCarItemPrice'>{{item.shopPrice}}分</text>
         <text class='shopCarItemCount'>{{item.shopPrice}}份</text>
       </view>
+      <view class='content_rigth'> 
+        <!-- <text class='child_tiht'>是不是这样</text> -->
+        <icon type='info'></icon>
+      </view>
     </view>
   </view>
   <view class='shopCarOperator'>

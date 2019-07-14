@@ -1,0 +1,7 @@
+<!--pages/test/test.wxml-->
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{objectArray}}" range-key="{{'name'}}">
+  <!--  range-key="{{'name'}}" 或者  range-key='name'  -->
+    <view class="picker">
+      当前选择：{{array[index]}}
+    </view>
+  </picker>

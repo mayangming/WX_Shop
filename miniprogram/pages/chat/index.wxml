@@ -1,5 +1,5 @@
 <!--pages/chat/index.wxml-->
-<view class="chatList" wx:for="{{chatArray}}" wx:key="userId">
+<view class="chatList" wx:for="{{chatArray}}" wx:key="userId" data-idx='{{index}}'>
   <image class="chatItemHeadIcon" src='{{item.userIcon}}'></image>
   <view class='itemContent'>
     <text id='itemUserName'>{{item.userName}}</text>
@@ -7,6 +7,7 @@
       <text id='itemChatContent'>{{item.chatContent}}</text>
       <text id='itemChatTime'>2019年3月24</text>
     </view>
+    <input type='text' placeholder="文本输入框" value='123' bindinput='chatInput' id = '{{item.index}}'></input>
   </view>
-
 </view>
+<button type='primary' catchtap='test'>test</button>

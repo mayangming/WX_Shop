@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "Review",
+  "usingComponents": {
+    "login":"/components/login/login",
+    "product":"/components/products/products"
+  }
+}

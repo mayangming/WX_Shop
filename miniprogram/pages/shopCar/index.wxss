@@ -69,3 +69,6 @@
 .shopCarTotal{
   align-self: center;
 }
+.content_rigth{
+  text-align: right;
+}

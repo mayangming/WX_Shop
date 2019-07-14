@@ -1,0 +1,23 @@
+<!--pages/chatDetails/index.wxml-->
+<view class='chatDetailsRoot'>
+  <view class='chatItem' wx:for="{{chatDetailsList}}" wx:key="{{item.messageId}}">
+    <text class='lastTime'>{{item.lastTime}}</text>
+    <view class='chatLeft' wx:if="{{item.fromId == 123}}">
+      <image class='headIcon' src='{{item.headIcon}}'></image>
+      <text>{{item.content}}</text>
+    </view>
+    <view class='chatRight' wx:elif="{{item.fromId == 1}}">
+      <image class='headIcon' src='{{item.headIcon}}'></image>
+      <text>{{item.content}}</text>
+    </view>
+    <view wx:else>
+      <view>未知数据类型</view>
+    </view>
+  </view>
+  <view class='chatOpertor'>
+    <input class='chatSendContent' type='text' placeholder="发送内容">
+      
+    </input>
+    <button catchtap='sendContentListener'>发送</button>
+  </view>
+</view>

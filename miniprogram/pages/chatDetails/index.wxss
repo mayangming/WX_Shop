@@ -1,0 +1,52 @@
+/* pages/chatDetails/index.wxss */
+/** 页面配置属性 */
+page {
+    background-color: #F8F8F8;
+}
+
+.chatItem {
+  margin: 20rpx;
+}
+
+.chatLeft {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10rpx;
+  margin-top: 10rpx;
+}
+
+.chatRight {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 10rpx;
+  margin-top: 10rpx;
+}
+
+.headIcon {
+  width: 100rpx;
+  height: 100rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  border-radius: 10rpx;
+}
+
+.lastTime {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.chatOpertor{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #EEE5DE;
+}
+.chatSendContent{
+  flex-grow: 1;
+  margin-right: 10rpx;
+  margin-left: 10rpx;
+}

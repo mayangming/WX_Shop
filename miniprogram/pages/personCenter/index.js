@@ -11,9 +11,6 @@ Page({
 
   /**
    * 生命周期函数--监听页面加载
-   */
-  onLoad: function(options) {
-    this.checkAuth()
   },
 
   /**
@@ -84,8 +81,6 @@ Page({
         }
       }
     })
-
-
   },
   getAddress: function() {
     var address = '';
@@ -107,7 +102,7 @@ Page({
         })
       },
       fail(e) {
-        console.log(y)
+        console.log(e)
       }
     })
   },
@@ -119,7 +114,8 @@ Page({
         var length = Object.keys(authMap).length;
         console.log("长度:" + length)
         var isAuthAddress = 0; //是否授权通过，有三种情况，0:从未授权，1:授权成功，2:授权失败
-        if ('scope.address' in authMap) {
+        // if ('scope.address' in authMap) {
+        if (authMap.hasOwnProperty('scope.address')){
           if (authMap['scope.address']) { //已经授权成功
             isAuthAddress = 1
           } else { //授权拒绝
