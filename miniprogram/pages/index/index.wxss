@@ -135,3 +135,31 @@ page {
   line-height: 36rpx;
   word-break: break-all;
 }
+.operate {
+  display:flex;  
+  flex-direction: row;
+  justify-content: center;
+  position: absolute;
+  margin: 20rpx;
+  width: 100%;
+  height: 50rpx;
+  background-color: olive;
+}
+.cover{
+  width: 50vw;
+  height: 20vh;
+}
+.content{
+  color: darkblue;
+  position: relative;
+}
+.tv{
+  background-color: pink;
+}
+.tv.tv2{
+  color: darkblue;
+}
+.tv.tv3{
+  color: orange;
+  font-size: 30rpx;
+}

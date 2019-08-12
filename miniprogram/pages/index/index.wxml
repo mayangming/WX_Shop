@@ -1,3 +1,8 @@
-<navigator>
 
-</navigator>
+<!-- <view style="width:50vw">
+  <cover-image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big143004.jpg"></cover-image>
+</view> -->
+
+<view class="tv tv2 tv3">
+ QQQQ
+</view>

@@ -21,7 +21,6 @@
       <view class="advantage-text">Get it within 24 Hours.</view>
     </view>
   </view>
-
   <view class="review-entry">
     <view class="review-btn" bindtap="onTapReviewEntry">
       <view class="review-title">Reviews</view>

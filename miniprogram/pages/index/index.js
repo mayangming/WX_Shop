@@ -10,7 +10,35 @@ Page({
     requestResult: ''
   },
 
+  test(i){
+    var j = undefined || "0";
+    console.log('YM',j)
+
+    var message = {
+      age:12
+    }
+
+    var name = '';
+
+    var address = '北京';
+
+    var test = name && (message.name = name)
+    var test2 = address && (message.address = address)
+
+    console.log('YM_message',message)
+    console.log('YM_test', test)
+    console.log('YM_test2', test2)
+
+    if(name = ''){
+      console.log('成功')
+    }else{
+      console.log('失败')
+    }
+
+  },
+
   onLoad: function() {
+    this.test()
     if (!wx.cloud) {
       wx.redirectTo({
         url: '../chooseLib/chooseLib',

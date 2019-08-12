@@ -36,13 +36,13 @@ Page({
           cartTotal: util.formatPrice(0),//默认初始化为0元
           cartList: data
         })
-      }else{
+      } else {
         this.setData({
           cartTotal: util.formatPrice(0),//默认初始化为0元
           cartList: []
         })
       }
-    
+
     }).catch(err => {
       console.error(err)
       wx.hideLoading()
@@ -65,7 +65,7 @@ Page({
       cartList.forEach(product => {
         cartCheckMap[product.productId] = isSelectAllChecked
       })
-    }else{
+    } else {
       cartCheckMap[checkId] = !cartCheckMap[checkId]
       isSelectAllChecked = true
       cartList.forEach(product => {
@@ -94,11 +94,12 @@ Page({
   },
   onTapEditCart() {
     if (!this.data.isCartEdit) {
-    this.setData({
-      isCartEdit: !this.data.isCartEdit
-      // isCartEdit: true
-    })}else{
-      this.updateCart() 
+      this.setData({
+        isCartEdit: !this.data.isCartEdit
+        // isCartEdit: true
+      })
+    } else {
+      this.updateCart()
     }
   },
   adjustCartProductCount(event) {
@@ -177,37 +178,45 @@ Page({
       isCheckout: true//该变量用来判断是购物车结算还是立即购买
     }).then(result => {
       wx.hideLoading()
-        wx.hideLoading()
+      wx.hideLoading()
 
-        const data = result.result
+      const data = result.result
 
-        if (data) {
-          wx.showToast({
-            title: 'Succeed',
-          })
-
-          this.setData({
-            cartList: cartToUpdate
-          })
-
-          this.getCart()
-        }
-      }).catch(err => {
-        console.error(err)
-        wx.hideLoading()
-
+      if (data) {
         wx.showToast({
-          icon: 'none',
-          title: 'Failed',
+          title: 'Succeed',
         })
+
+        this.setData({
+          cartList: cartToUpdate
+        })
+
+        this.getCart()
+      }
+    }).catch(err => {
+      console.error(err)
+      wx.hideLoading()
+
+      wx.showToast({
+        icon: 'none',
+        title: 'Failed',
       })
-  
+    })
+
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      
+    let t = (function () {/*
+line 1
+line 2
+line 3
+*/}).toString().split('\n').slice(1, -1).join('\n')
+    // "line 1
+    // line 2
+    // line 3"
+    console.log('YM',t)
   },
 
   /**
@@ -237,7 +246,7 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-   
+
   },
 
   /**

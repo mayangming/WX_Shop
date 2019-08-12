@@ -7,7 +7,7 @@
   <view class="empty-text">Your cart is empty.</view>
   <view class="empty-text">Let's get shopping!</view>
 </view>
-<view wx:else>
+<view wx:else>  
   <view class="cart-top">
     <view class="cart-total">
       <view class="cart-check-wrapper white {{isSelectAllChecked ? 'check' : ''}}"bindtap="onTapCheck" data-id="selectAll">
