@@ -13,7 +13,6 @@ Page({
     })
   },
   onLoad: function() {
-
   },
 
   choose() {

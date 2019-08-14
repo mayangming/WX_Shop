@@ -36,8 +36,67 @@ Page({
     }
 
   },
+  functionTest(){
+    /** 函数的基本定义,需要调用才能执行 */
+    function f1(value) {
+      return '函数基本定义';
+    }
 
+    /** 函数表达式,需要调用才能执行 */
+    var f2 = function (s) {
+      console.log('函数表达式', s);
+    };
+
+    /** ES6函数表达式,需要调用才能执行 */
+    var f3 = v => v + v;
+
+    // 等同于
+    var f4 = function (v) {
+      return v + v;
+    };
+
+    /** 回调函数 */
+    function f5(callBack) {
+      callBack(5)
+    }
+
+    f5(function (value) {
+      console.log('匿名函数的使用', value)
+    })
+    /** ES6函数表达式,函数返回对象的方式 */
+    var f6 = (key,value)=>({
+      key: key,
+      value: value
+    })
+    console.log('函数中对象的返回方式',f6(1,2))
+    /** 对象中的函数使用 */
+    var o = {
+      f7: function(value){
+        console.log('对象函数的使用1', value)
+      },
+      f8(value){
+        console.log('对象函数的使用2', value)
+      },
+      f9:value =>{
+        console.log('对象函数的使用3',value)
+        return '结果f8'
+      },
+      f10: value => '结果f9',
+      f11:f2,
+      f2
+    }
+    o.f7(1)
+    o.f8(2)
+    var result_9 = o.f9(3)
+    console.log('result', result_9)
+    var result_10 = o.f10(3)
+    console.log('result', result_10)
+    o.f11('对象中的函数表达是1')
+    o.f2('对象中的函数表达是2')
+  },
   onLoad: function() {
+    this.functionTest()
+
     this.test()
     if (!wx.cloud) {
       wx.redirectTo({
