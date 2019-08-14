@@ -42,56 +42,64 @@ Page({
       return '函数基本定义';
     }
 
-    /** 函数表达式,需要调用才能执行 */
+    /** 没有名字的函数表达式,需要调用才能执行 */
     var f2 = function (s) {
       console.log('函数表达式', s);
     };
-
+    
+    /** 有名字的函数表达式,需要调用才能执行 */
+    var f3 = function f(s){
+      //f只在这个范围内有效，函数外无效,这种方式可以适用于递归方式
+      console.log('有名字的函数表达式_1', s);
+      console.log('有名字的函数表达式_2', f);
+      console.log('有名字的函数表达式_3', this);
+    }
+    f3('aaaaaaaaa')
     /** ES6函数表达式,需要调用才能执行 */
-    var f3 = v => v + v;
+    var f4 = v => v + v;
 
     // 等同于
-    var f4 = function (v) {
+    var f5 = function (v) {
       return v + v;
     };
 
     /** 回调函数 */
-    function f5(callBack) {
+    function f6(callBack) {
       callBack(5)
     }
 
-    f5(function (value) {
+    f6(function (value) {
       console.log('匿名函数的使用', value)
     })
     /** ES6函数表达式,函数返回对象的方式 */
-    var f6 = (key,value)=>({
+    var f8 = (key,value)=>({
       key: key,
       value: value
     })
-    console.log('函数中对象的返回方式',f6(1,2))
+    console.log('函数中对象的返回方式',f8(1,2))
     /** 对象中的函数使用 */
     var o = {
-      f7: function(value){
+      f9: function(value){
         console.log('对象函数的使用1', value)
       },
-      f8(value){
+      f10(value){
         console.log('对象函数的使用2', value)
       },
-      f9:value =>{
+      f11:value =>{
         console.log('对象函数的使用3',value)
         return '结果f8'
       },
-      f10: value => '结果f9',
-      f11:f2,
+      f12: value => '结果f9',
+      f13:f2,
       f2
     }
-    o.f7(1)
-    o.f8(2)
-    var result_9 = o.f9(3)
-    console.log('result', result_9)
-    var result_10 = o.f10(3)
-    console.log('result', result_10)
-    o.f11('对象中的函数表达是1')
+    o.f9(1)
+    o.f10(2)
+    var result_11 = o.f11(3)
+    console.log('result', result_11)
+    var result_12 = o.f12(3)
+    console.log('result', result_12)
+    o.f13('对象中的函数表达是1')
     o.f2('对象中的函数表达是2')
   },
   onLoad: function() {
