@@ -102,9 +102,26 @@ Page({
     o.f13('对象中的函数表达是1')
     o.f2('对象中的函数表达是2')
   },
-  onLoad: function() {
-    this.functionTest()
 
+  funTest1: function(callBack){
+
+    function fun1(value){
+      console.log('fun1',value)
+    }
+
+    function fun2(value) {
+      console.log('fun2', value)
+    }
+    callBack(fun1,fun2)
+  },
+
+
+  onLoad: function() {
+    // this.functionTest()
+    this.funTest1((f1,f2) => {
+      f1('第一'),
+      f2('第二')
+    })
     this.test()
     if (!wx.cloud) {
       wx.redirectTo({
