@@ -107,11 +107,10 @@ Page({
   uploadImage(callback) {
     const previewImages = this.data.previewImages
     const images = []
-
     if (previewImages.length) {
       let imageCount = previewImages.length
       for (let i = 0; i < imageCount; i++) {
-        db.uploadImage(previewImages[i]).then(result => {
+       var p  = db.uploadImage(previewImages[i]).then(result => {
           images.push(result.fileID)
           if (i === imageCount - 1) {
             callback && callback(images)
@@ -120,6 +119,7 @@ Page({
           console.log('err', err)
         })
       }
+     
     } else {
       callback && callback(images)
     }
