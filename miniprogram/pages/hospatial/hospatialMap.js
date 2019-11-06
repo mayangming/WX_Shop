@@ -38,7 +38,9 @@ Page({
           height: 30
         },
     clickable: true
-    }]
+    }],
+      longitude: 113.324520,
+      latitude: 23.099994
   },
   regionchange(e) {
     console.log(e.type)
@@ -58,7 +60,8 @@ Page({
     this.qqmapsdk = new QQMapWX({
       key: 'EAXBZ-33R3X-AA64F-7FIPQ-BY27J-5UF5B'
     })
-    this.setLocation()
+    // this.setLocation()
+    this.onTapLocation()
   },
   //设置位置
   setLocation(){
@@ -85,20 +88,27 @@ Page({
   getLocation: function () {
     wx.getLocation({
       success: res => {
+        console.log('定位成功当前位置', res)
+
+        this.setData({
+          latitude: res.latitude,
+          longitude: res.longitude
+        })
+
         this.qqmapsdk.reverseGeocoder({
           location: {
             latitude: res.latitude,
             longitude: res.longitude
           },
           success: res => {
-            
+
             let city = res.result.address_component.city
             console.log(city)
+            console.log('使用sdk获取当前位置',res)
             this.setData({
               city: city,
               locationTipsText: ''
             })
-            this.getNowWeather()
           }
         })
       },
@@ -108,6 +118,20 @@ Page({
         })
       }
     })
+  },
+  onTapLocation: function () {
+    if (this.data.locationAuthType == UNAUTHORIZED) {
+      wx.openSetting({
+        success: res => {
+          let auth = res.authSetting['scope.userLocation']
+          if (auth) {
+            this.getLocation()
+          }
+        }
+      })
+    } else {
+      this.getLocation()
+    }
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
