@@ -1,5 +1,4 @@
 // pages/test/test.js
-
 Page({
 
   /**
@@ -37,9 +36,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var value = this.innerMethod(2);
+    var value1 = this.innerMethod(2);
+    console.log('YM_1',value())
+    console.log('YM_2', value1())
   },
 
+  innerMethod: function (value) {
+    return function () {
+      return value++;
+    }
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

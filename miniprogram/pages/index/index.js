@@ -34,6 +34,20 @@ Page({
     } else {
       console.log('失败')
     }
+    var tt = `In JavaScript this is
+ not legal.`
+  console.log('YM',tt)
+
+    let a = 5;
+    let b = 10;
+
+    tag`a as${a + b}n${a * b}`;
+    // 等同于
+    // tag(['Hello ', ' world ', ''], 15, 50);
+    function tag(stringArr) {
+      console.log('YM_1', stringArr)
+      console.log('YM_2', arguments)
+    }
 
   },
   functionTest() {
@@ -113,8 +127,6 @@ Page({
     }
     callBack(fun1,fun2)
   },
-
-
   onLoad: function() {
     // this.functionTest()
     this.funTest1((f1,f2) => {
